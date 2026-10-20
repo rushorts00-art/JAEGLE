@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SourceBridge — China Sourcing Agent for US Sellers | Flat 8%, Factory-Direct</title>
+<meta name="description" content="We find the factory, negotiate the price, inspect the goods, and ship to your US warehouse. One transparent fee: 8%. You see every quote we see.">
+<meta property="og:title" content="SourceBridge — Factory-direct sourcing from China">
+<meta property="og:description" content="Flat 8% sourcing for US e-commerce sellers. Real factory quotes, photo & video QC, delivery to your 3PL or Amazon FBA.">
+<meta name="theme-color" content="#070B14">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070B14'/%3E%3Cpath d='M18 40c7 9 21 9 28 0' stroke='%23D4A853' stroke-width='6' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='32' cy='22' r='5' fill='%23D4A853'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script>
+/* apply saved theme before first paint; dark-luxe is the default */
+document.documentElement.dataset.theme =
+  localStorage.getItem('sb_theme') || 'dark';
+</script>
+<style>
+/* ================= DESIGN TOKENS ================= */
+:root{
+  --bg:#080C16;
+  --card:#0F1524;
+  --card-2:#0C1220;
+  --alt:#0B101D;
+  --calc-bg:#0A0F1B;
+  --ink:#F2EEE3;
+  --ink-2:#CFC9BA;
+  --muted:#8E96A8;
+  --line:rgba(242,238,227,.08);
+  --line-gold:rgba(212,168,83,.28);
+  --gold:#D4A853;
+  --gold-2:#EBCE8C;
+  --gold-grad:linear-gradient(115deg,#A87F32 0%,#E9CB85 45%,#C9A24B 100%);
+  --accent:#D4A853;
+  --accent-dark:#B8862F;
+  --accent-text:#E5C57E;
+  --accent-soft:rgba(212,168,83,.10);
+  --field-bg:#0D1424;
+  --bar-bg:#1A2338;
+  --header-bg:rgba(8,12,22,.82);
+  --hero-bg:#070B14;
+  --hero-ink:#F5F1E6;
+  --hero-sub:rgba(245,241,230,.64);
+  --hero-line:rgba(245,241,230,.16);
+  --glow-a:rgba(212,168,83,.14);
+  --glow-b:rgba(64,110,220,.10);
+  --step-num:rgba(212,168,83,.20);
+  --radius:18px;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 14px 40px -18px rgba(0,0,0,.55);
+  --shadow-lg:0 2px 6px rgba(0,0,0,.35), 0 32px 80px -24px rgba(0,0,0,.7);
+  --shadow-gold:0 18px 50px -18px rgba(212,168,83,.35);
+}
+html[data-theme="light"]{
+  --bg:#F7F3E9;
+  --card:#FFFFFF;
+  --card-2:#FCF9F1;
+  --alt:#F1ECDE;
+  --calc-bg:#F3EEE0;
+  --ink:#191F2E;
+  --ink-2:#3A4256;
+  --muted:#6B7183;
+  --line:rgba(25,31,46,.10);
+  --line-gold:rgba(169,127,47,.35);
+  --gold:#A87E2F;
+  --gold-2:#8F6A24;
+  --gold-grad:linear-gradient(115deg,#8F6A24 0%,#C9A24B 45%,#7C5C1E 100%);
+  --accent:#A87E2F;
+  --accent-dark:#7C5C1E;
+  --accent-text:#8F6A24;
+  --accent-soft:rgba(168,126,47,.10);
+  --field-bg:#FCFAF4;
+  --bar-bg:#E7E1D0;
+  --header-bg:rgba(247,243,233,.86);
+  --hero-bg:#F9F5EC;
+  --hero-ink:#151B2A;
+  --hero-sub:rgba(21,27,42,.66);
+  --hero-line:rgba(21,27,42,.16);
+  --glow-a:rgba(168,126,47,.12);
+  --glow-b:rgba(64,110,220,.07);
+  --step-num:rgba(168,126,47,.20);
+  --shadow:0 1px 2px rgba(25,31,46,.05), 0 14px 40px -18px rgba(25,31,46,.18);
+  --shadow-lg:0 2px 6px rgba(25,31,46,.06), 0 32px 80px -24px rgba(25,31,46,.25);
+  --shadow-gold:0 18px 50px -20px rgba(168,126,47,.35);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.7;color:var(--ink);background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  transition:background-color .35s ease, color .35s ease;
+}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.14;letter-spacing:-.01em;margin:0}
+p{margin:0}
+a{color:inherit}
+img,svg{display:block}
+::selection{background:rgba(212,168,83,.35)}
+.container{width:min(1160px,100% - 48px);margin-inline:auto}
+.section{padding:118px 0}
+.alt-bg{background:var(--alt);border-block:1px solid var(--line)}
+
+/* gold gradient text with a slow shimmer */
+.grad{
+  background:var(--gold-grad);background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shimmer 7s linear infinite;
+}
+@keyframes shimmer{to{background-position:200% center}}
+
+/* kicker with hairline dash */
+.kicker{
+  display:inline-flex;align-items:center;gap:14px;
+  color:var(--accent-text);font-weight:600;font-size:11.5px;
+  letter-spacing:.24em;text-transform:uppercase;
+}
+.kicker::before{content:"";width:28px;height:1px;background:var(--gold);flex:none}
+
+.section-head{max-width:680px;margin-bottom:60px}
+.section-head h2{font-size:clamp(32px,4vw,48px);margin:18px 0 18px}
+.lead{color:var(--muted);font-size:17.5px}
+.center{margin-inline:auto;text-align:center}
+.center .kicker::after{content:"";width:28px;height:1px;background:var(--gold);flex:none}
+
+/* ================= BUTTONS ================= */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:15px 30px;border-radius:999px;border:1px solid transparent;
+  font-family:'Inter',sans-serif;font-size:15px;font-weight:600;letter-spacing:.01em;
+  text-decoration:none;cursor:pointer;transition:.25s ease;white-space:nowrap;
+}
+.btn-gold{
+  background:var(--gold-grad);background-size:150% auto;color:#171204;
+  box-shadow:var(--shadow-gold);
+}
+.btn-gold:hover{background-position:right center;transform:translateY(-2px)}
+.btn-line{border-color:var(--hero-line);color:var(--hero-ink)}
+.btn-line:hover{border-color:var(--gold);color:var(--accent-text)}
+.btn-outline{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-outline:hover{border-color:var(--gold);color:var(--accent-text)}
+
+/* ================= HEADER ================= */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:60;color:var(--hero-ink);
+  transition:background .3s ease, box-shadow .3s ease, color .3s ease;
+}
+.site-header.scrolled{
+  background:var(--header-bg);
+  -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);
+  color:var(--ink);box-shadow:0 1px 0 var(--line);
+}
+.nav{display:flex;align-items:center;gap:22px;height:78px;position:relative}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:.01em;color:inherit}
+.brand .mark{
+  width:36px;height:36px;border-radius:50%;border:1px solid var(--line-gold);
+  background:var(--accent-soft);display:grid;place-items:center;flex:none;
+}
+.brand .mark svg{width:19px;height:19px}
+.nav-links{display:flex;align-items:center;gap:30px;margin-left:auto}
+.nav-links a{text-decoration:none;font-weight:500;font-size:14px;letter-spacing:.02em;opacity:.82;transition:.15s}
+.nav-links a:hover{opacity:1;color:var(--accent-text)}
+.nav-links .btn{padding:12px 24px;font-size:14px}
+.nav-controls{display:flex;align-items:center;gap:10px}
+.lang{display:flex;border:1px solid var(--hero-line);border-radius:999px;overflow:hidden;background:rgba(128,128,128,.06)}
+.site-header.scrolled .lang{border-color:var(--line);background:var(--card)}
+.lang button{
+  border:0;background:none;padding:7px 12px;cursor:pointer;
+  font-family:'Inter',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:.06em;
+  color:inherit;opacity:.62;transition:.15s;
+}
+.lang button:hover{opacity:1}
+.lang button.on{background:var(--gold-grad);color:#171204;opacity:1}
+.tbtn{
+  width:38px;height:38px;border-radius:50%;cursor:pointer;
+  border:1px solid var(--hero-line);background:rgba(128,128,128,.06);color:inherit;
+  display:grid;place-items:center;transition:.2s;
+}
+.site-header.scrolled .tbtn{border-color:var(--line);background:var(--card)}
+.tbtn:hover{border-color:var(--gold);color:var(--accent-text)}
+.tbtn svg{width:16px;height:16px}
+.tbtn .sun{display:none}
+html[data-theme="dark"] .tbtn .sun{display:block}
+html[data-theme="dark"] .tbtn .moon{display:none}
+.burger{display:none;margin-left:4px;background:none;border:0;cursor:pointer;padding:8px;color:inherit}
+.burger span{display:block;width:24px;height:2px;background:currentColor;border-radius:2px;margin:5px 0;transition:.2s}
+.nav.open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav.open .burger span:nth-child(2){opacity:0}
+.nav.open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+/* ================= HERO ================= */
+.hero{
+  position:relative;overflow:hidden;color:var(--hero-ink);
+  background:
+    radial-gradient(1100px 560px at 85% -10%, var(--glow-a), transparent 60%),
+    radial-gradient(900px 520px at -10% 110%, var(--glow-b), transparent 55%),
+    var(--hero-bg);
+  padding:170px 0 110px;
+  border-bottom:1px solid var(--line);
+}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border-radius:999px;
+  border:1px solid var(--hero-line);background:rgba(128,128,128,.06);
+  font-size:12.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--hero-sub);
+}
+html[data-theme="light"] .badge{color:var(--ink-2)}
+.badge .dot{width:7px;height:7px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(212,168,83,.18)}
+.hero h1{font-size:clamp(42px,5.6vw,68px);font-weight:600;color:var(--hero-ink);margin:28px 0 24px}
+.hero .sub{font-size:18px;color:var(--hero-sub);max-width:540px}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;margin:38px 0 52px}
+.hero-stats{display:flex;gap:0;flex-wrap:wrap}
+.hero-stats>div{padding:0 34px;border-left:1px solid var(--hero-line)}
+.hero-stats>div:first-child{padding-left:0;border-left:0}
+.hero-stats b{display:block;font-family:'Fraunces',serif;font-weight:600;font-size:30px;color:var(--hero-ink)}
+.hero-stats span{font-size:13px;color:var(--hero-sub);letter-spacing:.02em}
+
+/* entrance choreography */
+.rise{opacity:0;transform:translateY(26px);animation:rise .95s cubic-bezier(.16,.7,.2,1) forwards;animation-delay:var(--rd,0s)}
+@keyframes rise{to{opacity:1;transform:none}}
+
+/* hero "paper" report — deliberately paper-white in both themes */
+.hero-visual{position:relative}
+.report{
+  --ink:#141A28;--muted:#5B6472;--line:#E7E1D2;--gold:#A87E2F;--gold-soft:#FBF3DD;--gold-ink:#7C5C1E;
+  background:#FFFDF7;color:var(--ink);border-radius:6px;box-shadow:var(--shadow-lg);
+  border:1px solid rgba(25,31,46,.06);
+  transform:rotate(1.6deg);animation:float 8s ease-in-out infinite alternate;font-size:13.5px;overflow:hidden;
+}
+@keyframes float{from{transform:rotate(1.6deg) translateY(0)}to{transform:rotate(1.6deg) translateY(-12px)}}
+.report-head{display:flex;align-items:center;gap:8px;padding:13px 20px;border-bottom:1px solid var(--line);background:#FAF6EA}
+.report-head .dots{display:flex;gap:5px}
+.report-head .dots i{width:9px;height:9px;border-radius:50%;background:#E4DECB}
+.report-head .dots i:first-child{background:#D4A853}
+.report-head span{margin-left:8px;color:var(--muted);font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.report-body{padding:20px 20px 22px}
+.report-body h3{font-family:'Fraunces',serif;font-size:16.5px;margin-bottom:4px;color:#141A28}
+.report-body .sku{color:var(--muted);font-size:12px;margin-bottom:16px}
+.rrow{
+  display:grid;grid-template-columns:1.25fr .8fr .7fr .8fr;gap:8px;align-items:center;
+  padding:11px 13px;border-radius:4px;font-weight:500;color:#141A28;
+}
+.rrow+.rrow{margin-top:5px}
+.rrow .fac{font-weight:600;font-size:13px}
+.rrow .dim{color:var(--muted);font-size:12.5px}
+.rrow.best{background:var(--gold-soft);outline:1px solid rgba(168,126,47,.4);position:relative}
+.rrow .pick{
+  position:absolute;right:10px;top:-9px;background:linear-gradient(115deg,#8F6A24,#C9A24B);
+  color:#FCF7E9;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 9px;border-radius:999px;
+}
+.report-foot{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+  margin-top:16px;padding-top:15px;border-top:1px dashed var(--line);color:var(--muted);font-size:12.5px;
+}
+.report-foot b{color:#1D7A48;font-weight:600;font-size:11.5px;display:flex;align-items:center;gap:6px;letter-spacing:.06em}
+.chip-float{
+  position:absolute;display:flex;align-items:center;gap:8px;background:#FFFDF7;color:#141A28;
+  border:1px solid rgba(25,31,46,.08);
+  border-radius:6px;box-shadow:var(--shadow-lg);padding:11px 17px;font-size:13px;font-weight:600;
+}
+.chip-float.a{top:-24px;right:-8px;transform:rotate(-3deg)}
+.chip-float.a b{font-family:'Fraunces',serif;background:linear-gradient(115deg,#8F6A24,#C9A24B);-webkit-background-clip:text;background-clip:text;color:transparent}
+.chip-float.b{bottom:-20px;left:-12px;transform:rotate(2deg)}
+.chip-float.b svg{color:#1D7A48}
+
+/* ================= STATS BAND (animated counters) ================= */
+.stats-band{border-bottom:1px solid var(--line);background:var(--card-2)}
+.stats-row{display:grid;grid-template-columns:repeat(4,1fr);padding:44px 0}
+.stats-row>div{padding:0 36px;border-left:1px solid var(--line)}
+.stats-row>div:first-child{border-left:0;padding-left:0}
+.stats-row b{
+  display:block;font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,3.4vw,42px);
+  line-height:1.1;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.stats-row span{font-size:13px;color:var(--muted);letter-spacing:.02em}
+
+/* ================= STRIP ================= */
+.strip{border-bottom:1px solid var(--line);background:var(--bg)}
+.strip .row{
+  display:flex;align-items:center;gap:14px 36px;flex-wrap:wrap;justify-content:center;
+  padding:28px 0;font-family:'Fraunces',serif;font-weight:500;font-size:15px;
+  color:var(--muted);letter-spacing:.04em;
+}
+.strip .row em{font-style:normal;font-size:11px;font-weight:600;letter-spacing:.22em;color:var(--accent-text);opacity:.9}
+
+/* ================= CARDS ================= */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:34px 32px;box-shadow:var(--shadow);
+  transition:transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+}
+.card:hover{transform:translateY(-4px);border-color:var(--line-gold);box-shadow:var(--shadow-lg)}
+.card h3{font-size:20px;margin-bottom:12px}
+.card p{color:var(--muted);font-size:15px}
+.icon-wrap{
+  width:50px;height:50px;border-radius:50%;border:1px solid var(--line-gold);
+  background:var(--accent-soft);display:grid;place-items:center;margin-bottom:20px;color:var(--accent-text);
+}
+.icon-wrap svg{width:21px;height:21px}
+
+/* problem */
+.problem .card{border-top:1px solid var(--line-gold)}
+.problem-link{
+  display:inline-flex;align-items:center;gap:8px;margin-top:38px;font-weight:600;
+  color:var(--accent-text);text-decoration:none;font-size:15.5px;transition:gap .2s;
+}
+.problem-link:hover{gap:12px}
+
+/* ================= CASES ================= */
+.case .case-top{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.case .case-num{
+  font-family:'Fraunces',serif;font-weight:600;font-size:clamp(38px,4vw,52px);line-height:1;
+  background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.case .case-numl{color:var(--muted);font-size:14px}
+.case .case-tag{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-text);border:1px solid var(--line-gold);border-radius:999px;padding:5px 12px;margin-bottom:18px;
+}
+.case h3{font-size:19px;margin-bottom:10px}
+.case p{color:var(--muted);font-size:14.5px}
+
+/* ================= STEPS ================= */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px 30px;box-shadow:var(--shadow);transition:border-color .3s,transform .3s}
+.step:hover{border-color:var(--line-gold);transform:translateY(-3px)}
+.step .num{font-family:'Fraunces',serif;font-weight:600;font-size:44px;line-height:1;color:var(--step-num);margin-bottom:18px}
+.step h3{font-size:18px;margin-bottom:9px}
+.step p{color:var(--muted);font-size:14.5px}
+
+/* ================= CALCULATOR ================= */
+.calc{background:var(--calc-bg);border-block:1px solid var(--line)}
+.calc-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.calc-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:38px}
+.calc-card label{font-weight:600;font-size:14.5px;display:block;margin-bottom:16px}
+.calc-val{font-family:'Fraunces',serif;font-weight:600;font-size:38px;margin-bottom:22px}
+input[type=range]{
+  width:100%;-webkit-appearance:none;appearance:none;height:4px;border-radius:99px;
+  background:linear-gradient(90deg,var(--gold) var(--fill,30%),var(--bar-bg) var(--fill,30%));
+  outline:none;margin:0 0 8px;cursor:pointer;
+}
+input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--card);
+  border:2px solid var(--gold);box-shadow:0 0 0 5px rgba(212,168,83,.15);cursor:grab;
+}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--card);border:2px solid var(--gold);cursor:grab}
+.calc-range-lbls{display:flex;justify-content:space-between;color:var(--muted);font-size:12.5px;margin-bottom:30px}
+.cmp{display:grid;gap:15px}
+.cmp-row .lbl{display:flex;justify-content:space-between;font-size:13.5px;font-weight:600;margin-bottom:8px;color:var(--ink)}
+.cmp-row .lbl b{font-family:'Fraunces',serif;font-size:15.5px;font-weight:600}
+.bar{height:8px;border-radius:99px;background:var(--bar-bg);overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px}
+.bar .agent{width:100%;background:linear-gradient(90deg,#7A6A55,#5C503F)}
+.bar .ours{width:44%;background:var(--gold-grad)}
+.save{
+  margin-top:26px;padding:20px 22px;border-radius:4px;border:1px solid var(--line-gold);
+  background:var(--accent-soft);color:var(--ink);
+  display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;
+}
+.save span{font-size:13.5px;color:var(--muted)}
+.save b{font-family:'Fraunces',serif;font-size:26px;font-weight:600;color:var(--accent-text)}
+.calc-note{margin-top:15px;color:var(--muted);font-size:12.5px}
+
+/* ================= TRUST ================= */
+.trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+
+/* ================= ABOUT ================= */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:center}
+.avatar-wrap{position:relative;width:min(320px,100%);margin-inline:auto}
+.avatar{
+  width:280px;height:280px;border-radius:50%;margin-inline:auto;
+  border:1px solid var(--line-gold);background:var(--card);
+  display:grid;place-items:center;color:var(--accent-text);
+  position:relative;z-index:1;
+}
+.avatar svg{width:92px;height:92px;opacity:.9}
+.avatar-wrap::before{
+  content:"";position:absolute;inset:-14px;border-radius:50%;
+  border:1px dashed var(--line-gold);animation:spin 40s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.avatar-cap{margin-top:20px;text-align:center;color:var(--muted);font-size:12.5px;letter-spacing:.04em}
+.about-facts{display:grid;gap:14px;margin-top:32px}
+.fact{display:flex;gap:14px;align-items:flex-start}
+.fact svg{flex:none;width:20px;height:20px;color:var(--gold);margin-top:3px}
+.fact span{color:var(--ink-2);font-size:15px}
+
+/* ================= TESTIMONIALS ================= */
+.tcard{display:flex;flex-direction:column;gap:18px}
+.stars{display:flex;gap:3px}
+.stars svg{width:16px;height:16px;fill:var(--gold)}
+.tcard blockquote{
+  margin:0;font-family:'Fraunces',serif;font-size:18.5px;line-height:1.5;color:var(--ink);
+}
+.tcard blockquote::before{content:"\201C";color:var(--gold);font-size:1.4em;line-height:0;margin-right:2px}
+.tcard .who b{display:block;font-size:14.5px;font-weight:600}
+.tcard .who span{font-size:13px;color:var(--muted)}
+.tm-note{margin-top:26px;text-align:center;color:var(--muted);font-size:12.5px;letter-spacing:.03em}
+
+/* ================= PRICING ================= */
+.price-card{display:flex;flex-direction:column;padding:40px 34px;position:relative;background:var(--card)}
+.price-card .pname{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-text);margin-bottom:10px}
+.price-card .pdesc{color:var(--muted);font-size:14.5px;margin-bottom:26px;min-height:44px}
+.price{font-family:'Fraunces',serif;font-weight:600;font-size:52px;letter-spacing:-.02em;line-height:1;color:var(--ink)}
+.price small{font-size:15px;font-weight:500;color:var(--muted);letter-spacing:0;font-family:'Inter',sans-serif}
+.price-card ul{list-style:none;margin:28px 0 34px;padding:0;display:grid;gap:12px}
+.price-card li{display:flex;gap:11px;font-size:14.5px;color:var(--ink-2);align-items:flex-start}
+.price-card li svg{flex:none;width:16px;height:16px;color:var(--gold);margin-top:4px}
+.price-card .btn{margin-top:auto}
+.price-card.featured{border:1px solid var(--line-gold);box-shadow:var(--shadow-gold)}
+.pop-chip{
+  position:absolute;top:-14px;left:50%;transform:translateX(-50%);
+  background:var(--gold-grad);color:#171204;font-size:10.5px;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;padding:6px 16px;border-radius:999px;white-space:nowrap;
+}
+.pricing-note{
+  margin-top:34px;text-align:center;color:var(--ink-2);font-size:14.5px;
+  padding:20px 28px;border-radius:4px;border:1px solid var(--line-gold);background:var(--accent-soft);
+}
+
+/* ================= FAQ ================= */
+.faq-list{max-width:800px;margin-inline:auto}
+.faq-list details{border-bottom:1px solid var(--line)}
+.faq-list summary{
+  cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;
+  gap:20px;padding:24px 4px;font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:var(--ink);
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::after{
+  content:"+";font-family:'Fraunces',serif;font-size:26px;color:var(--accent-text);
+  transition:transform .25s;line-height:1;flex:none;
+}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list details p{color:var(--muted);font-size:15px;padding:0 44px 26px 4px;margin:0}
+
+/* ================= CONTACT ================= */
+.contact{
+  background:
+    radial-gradient(900px 500px at 110% 0%, var(--glow-a), transparent 55%),
+    radial-gradient(700px 420px at -10% 110%, var(--glow-b), transparent 55%),
+    var(--hero-bg);
+  color:var(--hero-ink);border-top:1px solid var(--line);
+}
+.contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:72px;align-items:start}
+.contact h2{color:var(--hero-ink);font-size:clamp(30px,3.6vw,44px);margin:18px 0 18px}
+.contact .lead{color:var(--hero-sub)}
+.contact-channels{display:grid;gap:14px;margin-top:38px}
+.chan{
+  display:flex;align-items:center;gap:15px;padding:17px 20px;border-radius:4px;
+  border:1px solid var(--hero-line);background:rgba(128,128,128,.05);
+  text-decoration:none;transition:.2s;
+}
+.chan:hover{border-color:var(--line-gold)}
+.chan .ci{width:42px;height:42px;border-radius:50%;border:1px solid var(--line-gold);background:var(--accent-soft);display:grid;place-items:center;color:var(--accent-text);flex:none}
+.chan b{display:block;font-size:14.5px;color:var(--hero-ink)}
+.chan span{font-size:13px;color:var(--hero-sub)}
+.form-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-lg);padding:40px;color:var(--ink)}
+.form-card h3{font-size:23px;margin-bottom:6px}
+.form-card .fsub{color:var(--muted);font-size:14px;margin-bottom:26px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.field{display:grid;gap:7px}
+.field.full{grid-column:1/-1}
+.field label{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{
+  font-family:'Inter',sans-serif;font-size:14.5px;padding:13px 15px;border-radius:4px;
+  border:1px solid var(--line);background:var(--field-bg);color:var(--ink);outline:none;
+  transition:border-color .15s, box-shadow .15s;width:100%;
+}
+.field input::placeholder,.field textarea::placeholder{color:var(--muted);opacity:.7}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--gold);box-shadow:0 0 0 4px rgba(212,168,83,.12);
+}
+.form-card .btn{width:100%;margin-top:22px}
+.form-hint{margin-top:15px;text-align:center;color:var(--muted);font-size:12.5px}
+
+/* ================= FOOTER ================= */
+footer{background:#070B14;color:rgba(242,238,227,.68);padding:64px 0 44px;font-size:14px}
+html[data-theme="light"] footer{background:#141928;color:rgba(242,238,227,.68)}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:44px}
+.foot-grid h4{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+.foot-grid a{display:block;text-decoration:none;padding:5px 0;transition:color .15s}
+.foot-grid a:hover{color:var(--gold-2)}
+.foot-brand{display:flex;align-items:center;gap:11px;font-family:'Fraunces',serif;font-weight:600;font-size:19px;color:#F2EEE3;margin-bottom:16px}
+.foot-brand .mark{width:32px;height:32px;border-radius:50%;border:1px solid rgba(212,168,83,.4);display:grid;place-items:center}
+.foot-brand .mark svg{width:17px;height:17px}
+.foot-bottom{
+  margin-top:48px;padding-top:26px;border-top:1px solid rgba(242,238,227,.1);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;color:rgba(242,238,227,.4);
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+.wa-fab{
+  position:fixed;right:22px;bottom:22px;z-index:70;width:58px;height:58px;border-radius:50%;
+  background:#25D366;color:#fff;display:grid;place-items:center;text-decoration:none;
+  box-shadow:0 14px 34px -10px rgba(37,211,102,.55);
+  transition:transform .2s ease;
+}
+.wa-fab:hover{transform:scale(1.08)}
+.wa-fab svg{width:28px;height:28px}
+.wa-fab::before{
+  content:"";position:absolute;inset:0;border-radius:50%;background:#25D366;
+  animation:pulse 2.4s ease-out infinite;z-index:-1;
+}
+@keyframes pulse{0%{transform:scale(1);opacity:.5}70%{transform:scale(1.6);opacity:0}100%{opacity:0}}
+.wa-fab .tip{
+  position:absolute;right:72px;top:50%;transform:translateY(-50%);white-space:nowrap;
+  background:var(--card);border:1px solid var(--line-gold);color:var(--ink);
+  padding:9px 15px;border-radius:4px;font-size:13px;font-weight:600;
+  opacity:0;pointer-events:none;transition:.2s;box-shadow:var(--shadow);
+}
+.wa-fab:hover .tip{opacity:1}
+
+/* ================= REVEAL ================= */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,.7,.2,1) var(--d,0s), transform .8s cubic-bezier(.16,.7,.2,1) var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .reveal,.rise{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:80px}
+  .hero .sub{max-width:560px}
+  .hero-visual{max-width:520px;margin-inline:auto;width:100%}
+  .steps{grid-template-columns:1fr 1fr}
+  .calc-grid{grid-template-columns:1fr;gap:48px}
+  .contact-grid{grid-template-columns:1fr;gap:60px}
+  .grid-3{grid-template-columns:1fr 1fr}
+  .trust-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr;gap:56px}
+  .stats-row{grid-template-columns:1fr 1fr;gap:34px 0}
+  .stats-row>div:nth-child(3){border-left:0;padding-left:0}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:700px){
+  .section{padding:80px 0}
+  .hero{padding:136px 0 80px}
+  .grid-3{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr;gap:28px}
+  .stats-row>div{border-left:0;padding:0}
+  .hero-stats>div{padding:0 20px}
+  .nav-links{
+    display:none;position:absolute;top:86px;left:0;right:0;
+    background:var(--card);color:var(--ink);flex-direction:column;align-items:flex-start;
+    gap:4px;padding:20px 24px 24px;border-radius:var(--radius);box-shadow:var(--shadow-lg);
+  }
+  .nav.open .nav-links{display:flex}
+  .nav-links a{font-size:16px;padding:9px 0;opacity:1}
+  .nav-links .btn{margin-top:10px;width:100%}
+  .burger{display:block}
+  .nav-controls{margin-left:auto}
+  .nav-links{margin-left:0}
+  .chip-float.a{top:-16px;right:0}
+  .chip-float.b{bottom:-14px;left:0}
+  .wa-fab{right:16px;bottom:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="container nav" id="nav">
+    <a class="brand" href="#top" aria-label="SourceBridge home">
+      <span class="mark">
+        <svg viewBox="0 0 64 64" fill="none"><path d="M18 40c7 9 21 9 28 0" stroke="#D4A853" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="22" r="5" fill="#D4A853"/></svg>
+      </span>
+      SourceBridge
+    </a>
+    <nav class="nav-links" aria-label="Main">
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#cases" data-i18n="nav.cases">Case studies</a>
+      <a href="#how" data-i18n="nav.how">How it works</a>
+      <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a class="btn btn-gold" href="#contact" data-i18n="nav.cta">Get a free quote</a>
+    </nav>
+    <div class="nav-controls">
+      <div class="lang" role="group" aria-label="Language">
+        <button data-lang="en" class="on">EN</button>
+        <button data-lang="ru">RU</button>
+        <button data-lang="es">ES</button>
+      </div>
+      <button class="tbtn" id="themeToggle" aria-label="Toggle dark / light theme">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+      <button class="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="badge rise" style="--rd:.05s"><span class="dot"></span> <span data-i18n="hero.badge">Sourcing partner for US e-commerce brands</span></span>
+        <h1 class="rise" style="--rd:.15s"><span data-i18n="hero.h1a">Source from Chinese factories — </span><span class="grad" data-i18n="hero.h1b">without the agent markup</span></h1>
+        <p class="sub rise" style="--rd:.3s" data-i18n="hero.sub">We find the factory, negotiate the price, inspect every batch, and ship to your US warehouse. One flat fee: 8%. You see every quote we see — factory names included.</p>
+        <div class="hero-cta rise" style="--rd:.45s">
+          <a class="btn btn-gold" href="#contact" data-i18n="hero.cta1">Get a free sourcing quote</a>
+          <a class="btn btn-line" href="#how" data-i18n="hero.cta2">See how it works</a>
+        </div>
+        <div class="hero-stats rise" style="--rd:.6s">
+          <div><b>48h</b><span data-i18n="hero.s1">quote turnaround</span></div>
+          <div><b>8%</b><span data-i18n="hero.s2">flat fee — agents charge 15–20%</span></div>
+          <div><b>100%</b><span data-i18n="hero.s3">batches photo &amp; video inspected</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual rise" style="--rd:.5s">
+        <div class="report">
+          <div class="report-head">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span>sourcing_report.pdf</span>
+          </div>
+          <div class="report-body">
+            <h3 data-i18n="rep.title">LED Ring Light 10" — quotes</h3>
+            <div class="sku" data-i18n="rep.sku">Sent to 14 factories · 3 shortlisted</div>
+            <div class="rrow">
+              <span class="fac" data-i18n="rep.fA">Factory A</span>
+              <span class="dim">$3.10 <small data-i18n="rep.unit">/unit</small></span>
+              <span class="dim">MOQ 200</span>
+              <span class="dim">25 <small data-i18n="rep.days">days</small></span>
+            </div>
+            <div class="rrow best">
+              <span class="pick" data-i18n="rep.pick">Best pick</span>
+              <span class="fac" data-i18n="rep.fB">Factory B</span>
+              <span class="dim">$2.65 <small data-i18n="rep.unit">/unit</small></span>
+              <span class="dim">MOQ 100</span>
+              <span class="dim">20 <small data-i18n="rep.days">days</small></span>
+            </div>
+            <div class="rrow">
+              <span class="fac" data-i18n="rep.fC">Factory C</span>
+              <span class="dim">$2.85 <small data-i18n="rep.unit">/unit</small></span>
+              <span class="dim">MOQ 150</span>
+              <span class="dim">22 <small data-i18n="rep.days">days</small></span>
+            </div>
+            <div class="report-foot">
+              <span><span data-i18n="rep.landed">Landed cost est.</span> <b style="color:#141A28;font-family:Fraunces,serif">$4.05</b> /unit</span>
+              <b>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                <span data-i18n="rep.qc">QC PASSED</span>
+              </b>
+            </div>
+          </div>
+        </div>
+        <div class="chip-float a"><span data-i18n="rep.chip1">Flat fee</span><b>&nbsp;8%</b></div>
+        <div class="chip-float b">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span data-i18n="rep.chip2">Photo &amp; video QC on every batch</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS BAND ============ -->
+  <div class="stats-band">
+    <div class="container stats-row reveal">
+      <div><b data-count="150" data-suffix="+">0</b><span data-i18n="st.l1">factories vetted &amp; rated</span></div>
+      <div><b data-count="48" data-suffix="h">0</b><span data-i18n="st.l2">average first quote turnaround</span></div>
+      <div><b data-count="100" data-suffix="%">0</b><span data-i18n="st.l3">of batches inspected before shipping</span></div>
+      <div><b data-count="8" data-suffix="%">0</b><span data-i18n="st.l4">flat fee — no hidden markup</span></div>
+    </div>
+  </div>
+
+  <!-- ============ STRIP ============ -->
+  <div class="strip">
+    <div class="container row reveal">
+      <em data-i18n="strip.k">BUILT FOR SELLERS ON</em>
+      <span>Amazon</span><span>·</span><span>TikTok&nbsp;Shop</span><span>·</span><span>Shopify</span><span>·</span><span>Walmart</span><span>·</span><span>eBay</span>
+    </div>
+  </div>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="section problem">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker" data-i18n="pr.k">The problem</div>
+        <h2 data-i18n="pr.h2">The hidden tax on China sourcing</h2>
+        <p class="lead" data-i18n="pr.lead">Most sellers never see the real factory price. Here is where the money leaks.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal" style="--d:.05s">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M10.6 5.1A9.8 9.8 0 0 1 12 5c7 0 10 7 10 7a17.4 17.4 0 0 1-2.2 3.2M6.6 6.6A16.7 16.7 0 0 0 2 12s3 7 10 7a9.7 9.7 0 0 0 4.3-1"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/><path d="m2 2 20 20"/></svg>
+          </div>
+          <h3 data-i18n="pr.t1">Your "factory price" isn't</h3>
+          <p data-i18n="pr.b1">Agents quote 15–20% and bury their cut inside the unit price. You pay it on every single unit, forever.</p>
+        </div>
+        <div class="card reveal" style="--d:.15s">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+          </div>
+          <h3 data-i18n="pr.t2">MOQ roulette</h3>
+          <p data-i18n="pr.b2">You find the perfect product — attached to a 5,000-unit minimum. Cash gets stuck in inventory you never wanted.</p>
+        </div>
+        <div class="card reveal" style="--d:.25s">
+          <div class="icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><path d="M12 17.5v.5"/></svg>
+          </div>
+          <h3 data-i18n="pr.t3">Quality surprises</h3>
+          <p data-i18n="pr.b3">Defects surface after the container lands in the US. At that point the goods, the freight, and the problem are all yours.</p>
+        </div>
+      </div>
+      <div class="center reveal">
+        <a class="problem-link" href="#services"><span data-i18n="pr.more">There's a better model</span>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section" id="services" style="padding-top:48px">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker" data-i18n="sv.k">Services</div>
+        <h2 data-i18n="sv.h2">Everything between "I want this product" and "it's on my shelf"</h2>
+        <p class="lead" data-i18n="sv.lead">One partner for the whole chain — sourcing, negotiation, quality, and freight. No hand-offs, no markups in the middle.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <h3 data-i18n="sv.t1">Product sourcing</h3>
+          <p data-i18n="sv.b1">Send a link, a photo, or a sketch. You get 3+ verified factories with real prices, MOQs, and lead times — factory names included.</p>
+        </div>
+        <div class="card reveal" style="--d:.08s">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.9 8.9 0 0 1-3.8-.9L3 21l1.9-5.2a8.3 8.3 0 0 1-.9-3.8 8.4 8.4 0 0 1 8.5-8.4 8.4 8.4 0 0 1 8.5 8.4Z"/></svg></div>
+          <h3 data-i18n="sv.t2">Negotiation</h3>
+          <p data-i18n="sv.b2">We negotiate in person, in Mandarin, on the factory floor. Clients typically save 10–25% versus agent-listed prices.</p>
+        </div>
+        <div class="card reveal" style="--d:.16s">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 8 4.5v11L12 22l-8-4.5v-11L12 2Z"/><path d="M4 6.5 12 11l8-4.5"/><path d="M12 11v11"/></svg></div>
+          <h3 data-i18n="sv.t3">Sampling</h3>
+          <p data-i18n="sv.b3">Samples from your shortlist in 5–10 days, consolidated into one shipment so you compare quality side by side.</p>
+        </div>
+        <div class="card reveal" style="--d:.24s">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10Z"/><path d="m9 11.5 2 2 4-4"/></svg></div>
+          <h3 data-i18n="sv.t4">Quality control</h3>
+          <p data-i18n="sv.b4">Every batch inspected before it leaves the factory: photo &amp; video report, defect counts, fixes made on-site.</p>
+        </div>
+        <div class="card reveal" style="--d:.32s">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M1 8h13v8H1z"/><path d="M14 11h4l3 3v2h-7z"/><circle cx="6" cy="18.5" r="1.8"/><circle cx="17.5" cy="18.5" r="1.8"/></svg></div>
+          <h3 data-i18n="sv.t5">Freight &amp; delivery</h3>
+          <p data-i18n="sv.b5">Multiple suppliers, one shipment. Air freight in 7–12 days or sea in 25–40, delivered to your 3PL or Amazon FBA.</p>
+        </div>
+        <div class="card reveal" style="--d:.4s">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.6-6.3"/><path d="M21 3v6h-6"/></svg></div>
+          <h3 data-i18n="sv.t6">Re-order management</h3>
+          <p data-i18n="sv.b6">Repeat orders on autopilot: same factory, locked-in price, scheduled QC. Your inventory never waits on emails.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CASES ============ -->
+  <section class="section alt-bg" id="cases">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker" data-i18n="cs.k">Case studies</div>
+        <h2 data-i18n="cs.h2">Real numbers, real orders</h2>
+        <p class="lead" data-i18n="cs.lead">What transparent sourcing does to a P&amp;L. Figures below are illustrative — your results will be your own.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card case reveal">
+          <span class="case-tag" data-i18n="cs.tag1">Home &amp; kitchen · Amazon</span>
+          <div class="case-top">
+            <span class="case-num">−32%</span>
+            <span class="case-numl" data-i18n="cs.n1l">unit cost</span>
+          </div>
+          <h3 data-i18n="cs.t1">From middleman to factory</h3>
+          <p data-i18n="cs.b1">Swapped an AliExpress middleman for the actual factory. Same product, re-negotiated tooling and packaging — margin rebuilt in one order.</p>
+        </div>
+        <div class="card case reveal" style="--d:.12s">
+          <span class="case-tag" data-i18n="cs.tag2">New brand · TikTok Shop</span>
+          <div class="case-top">
+            <span class="case-num">6×</span>
+            <span class="case-numl" data-i18n="cs.n2l">cheaper product test</span>
+          </div>
+          <h3 data-i18n="cs.t2">MOQ: 1,000 → 150 units</h3>
+          <p data-i18n="cs.b2">Minimum negotiated from 1,000 to 150 units — a full shelf test on a sixth of the budget. The brand launched two months earlier.</p>
+        </div>
+        <div class="card case reveal" style="--d:.24s">
+          <span class="case-tag" data-i18n="cs.tag3">Gadgets · Amazon FBA</span>
+          <div class="case-top">
+            <span class="case-num">8%</span>
+            <span class="case-numl" data-i18n="cs.n3l">defects caught pre-shipment</span>
+          </div>
+          <h3 data-i18n="cs.t3">Video QC saved a season</h3>
+          <p data-i18n="cs.b3">Video QC flagged a bad batch before it left the plant. Re-made in 5 days — zero returns, zero stuck inventory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section" id="how">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker" data-i18n="hw.k">How it works</div>
+        <h2 data-i18n="hw.h2">From idea to warehouse in four steps</h2>
+        <p class="lead" data-i18n="hw.lead">You always know what's happening — every step comes with a report you can verify.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="num">01</div>
+          <h3 data-i18n="hw.t1">Send your product</h3>
+          <p data-i18n="hw.b1">A link, an ASIN, a photo, or a rough sketch. Within 48 hours you get a free feasibility read and 3 factory quotes.</p>
+        </div>
+        <div class="step reveal" style="--d:.1s">
+          <div class="num">02</div>
+          <h3 data-i18n="hw.t2">Compare real quotes</h3>
+          <p data-i18n="hw.b2">Prices, MOQs, lead times — with factory names, not "our trusted partner". You pick, we negotiate the final terms.</p>
+        </div>
+        <div class="step reveal" style="--d:.2s">
+          <div class="num">03</div>
+          <h3 data-i18n="hw.t3">Approve a sample</h3>
+          <p data-i18n="hw.b3">Samples from your shortlist arrive in about a week. You approve quality in your hands before any bulk commitment.</p>
+        </div>
+        <div class="step reveal" style="--d:.3s">
+          <div class="num">04</div>
+          <h3 data-i18n="hw.t4">We produce &amp; ship</h3>
+          <p data-i18n="hw.b4">Production follow-up, photo/video QC before release, consolidation, and freight to your US warehouse or FBA.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALCULATOR ============ -->
+  <section class="section calc" id="calc">
+    <div class="container calc-grid">
+      <div class="reveal">
+        <div class="kicker" data-i18n="cl.k">Do the math</div>
+        <h2 style="font-size:clamp(30px,3.6vw,44px);margin:18px 0" data-i18n="cl.h2">What is your agent really costing you?</h2>
+        <p class="lead" data-i18n="cl.lead">Drag the slider to your typical order value and see the difference a flat 8% makes — on every order, every month.</p>
+      </div>
+      <div class="calc-card reveal" style="--d:.15s">
+        <label for="orderValue" data-i18n="cl.lbl">Your typical order value</label>
+        <div class="calc-val" id="orderValueOut">$5,000</div>
+        <input type="range" id="orderValue" min="500" max="20000" step="250" value="5000" aria-label="Order value">
+        <div class="calc-range-lbls"><span>$500</span><span>$20,000</span></div>
+        <div class="cmp">
+          <div class="cmp-row">
+            <div class="lbl"><span data-i18n="cl.agentL">Typical agent (15–20%)</span><b id="agentOut" style="color:var(--muted)">$900</b></div>
+            <div class="bar"><i class="agent"></i></div>
+          </div>
+          <div class="cmp-row">
+            <div class="lbl"><span data-i18n="cl.oursL">SourceBridge (flat 8%)</span><b id="oursOut" style="color:var(--accent-text)">$400</b></div>
+            <div class="bar"><i class="ours"></i></div>
+          </div>
+        </div>
+        <div class="save">
+          <span data-i18n="cl.save">You keep on every order</span>
+          <b id="saveOut">+$500</b>
+        </div>
+        <p class="calc-note" data-i18n="cl.note">Estimate only — typical agent commissions run 15–20%; we used 18% for comparison.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST ============ -->
+  <section class="section" id="trust">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker" data-i18n="tr.k">Trust &amp; guarantees</div>
+        <h2 data-i18n="tr.h2">Why it's safe to send money through us</h2>
+        <p class="lead" data-i18n="tr.lead">Four rules we never break.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="card reveal">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.5 22 4v6h-6"/><path d="M22 4 12 14l-3-3-7 7"/><path d="M2 15v5h5"/></svg></div>
+          <h3 data-i18n="tr.t1">30 / 70 — never 100% upfront</h3>
+          <p data-i18n="tr.b1">You pay a 30% deposit to start production. The remaining 70% — only after your batch passes QC, with photo and video proof.</p>
+        </div>
+        <div class="card reveal" style="--d:.08s">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg></div>
+          <h3 data-i18n="tr.t2">Factory invoices, zero markup</h3>
+          <p data-i18n="tr.b2">You receive the factory's original quotation and invoice. Our 8% is a separate line item — always visible, never hidden in the price.</p>
+        </div>
+        <div class="card reveal" style="--d:.16s">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><circle cx="12" cy="13" r="4"/></svg></div>
+          <h3 data-i18n="tr.t3">Evidence at every step</h3>
+          <p data-i18n="tr.b3">Photos at 30%, 70% and 100% of production. A full inspection report before anything ships — you see what we see.</p>
+        </div>
+        <div class="card reveal" style="--d:.24s">
+          <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a2 2 0 0 1 2-2h8l6 6v14a2 2 0 0 1-2 2Z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h4"/></svg></div>
+          <h3 data-i18n="tr.t4">US entity, real contracts</h3>
+          <p data-i18n="tr.b4">Payments go through our US-registered company under a signed service agreement — not a personal wallet.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section alt-bg" id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <div class="avatar-wrap">
+          <div class="avatar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1.6-3.6 4.6-5.2 8-5.2s6.4 1.6 8 5.2"/></svg>
+          </div>
+          <div class="avatar-cap" data-i18n="ab.cap">( placeholder — add your photo here )</div>
+        </div>
+      </div>
+      <div class="reveal" style="--d:.15s">
+        <div class="kicker" data-i18n="ab.k">About</div>
+        <h2 style="font-size:clamp(30px,3.6vw,44px);margin:18px 0 20px" data-i18n="ab.h2">The people between you and the factory</h2>
+        <p class="lead" data-i18n="ab.p1">SourceBridge is a small, senior team based in China and the United States. We walk factory floors every week, speak the language, and answer in plain English — no agent theater.</p>
+        <p class="lead" style="margin-top:16px" data-i18n="ab.p2">We built this service the way we'd want it as sellers ourselves: every quote transparent, every factory named, every batch inspected.</p>
+        <div class="about-facts">
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span data-i18n="ab.f1">On the ground in China's manufacturing hubs — weekly factory visits</span>
+          </div>
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span data-i18n="ab.f2">US-registered partner company for payments and contracts</span>
+          </div>
+          <div class="fact">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+            <span data-i18n="ab.f3">One point of contact, from first quote to final delivery</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker" data-i18n="tm.k">Testimonials</div>
+        <h2 data-i18n="tm.h2">What clients say</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card tcard reveal">
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+          </div>
+          <blockquote data-i18n="tm.q1">Finally saw what a factory invoice actually looks like. The 8% paid for itself on the first order.</blockquote>
+          <div class="who"><b>Mike R.</b><span data-i18n="tm.r1">Amazon seller · home &amp; kitchen</span></div>
+        </div>
+        <div class="card tcard reveal" style="--d:.12s">
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+          </div>
+          <blockquote data-i18n="tm.q2">They caught a defective batch on video before it shipped. That one report saved me an entire season.</blockquote>
+          <div class="who"><b>Dana K.</b><span data-i18n="tm.r2">TikTok Shop brand owner</span></div>
+        </div>
+        <div class="card tcard reveal" style="--d:.24s">
+          <div class="stars">
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8-6.1-3.4-6.1 3.4 1.4-6.8-5.1-4.7 6.9-.8L12 2z"/></svg>
+          </div>
+          <blockquote data-i18n="tm.q3">MOQ dropped from 1,000 to 150 — I finally test products like a startup, not a casino.</blockquote>
+          <div class="who"><b>Victor S.</b><span data-i18n="tm.r3">Shopify · 4 stores</span></div>
+        </div>
+      </div>
+      <div class="tm-note reveal" data-i18n="tm.note">Sample reviews shown for layout — replace with your real client quotes.</div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section class="section alt-bg" id="pricing">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker" data-i18n="pc.k">Pricing</div>
+        <h2 data-i18n="pc.h2">Simple, transparent, credited forward</h2>
+        <p class="lead" data-i18n="pc.lead">Start free. Pay only when you see the value — literally, in factory quotes with names on them.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card price-card reveal">
+          <div class="pname" data-i18n="pc.n1">Free Report</div>
+          <p class="pdesc" data-i18n="pc.d1">See what your product really costs at the factory.</p>
+          <div class="price">$0</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l11">3 factory quotes with names</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l12">Landed-cost estimate</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l13">48-hour turnaround</span></li>
+          </ul>
+          <a class="btn btn-outline" href="#contact" data-i18n="pc.bt1">Start free</a>
+        </div>
+        <div class="card price-card featured reveal" style="--d:.1s">
+          <span class="pop-chip" data-i18n="pc.chip">Most popular</span>
+          <div class="pname" data-i18n="pc.n2">Sourcing Sprint</div>
+          <p class="pdesc" data-i18n="pc.d2">Full sourcing for one product, start to samples.</p>
+          <div class="price">$190</div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l21">Deep supplier search &amp; vetting</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l22">Negotiated pricing &amp; MOQ terms</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l23">Consolidated samples, QC report</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l24">Credited toward first order commission</span></li>
+          </ul>
+          <a class="btn btn-gold" href="#contact" data-i18n="pc.bt2">Run my sprint</a>
+        </div>
+        <div class="card price-card reveal" style="--d:.2s">
+          <div class="pname" data-i18n="pc.n3">Full Service Order</div>
+          <p class="pdesc" data-i18n="pc.d3">We handle the entire order, end to end.</p>
+          <div class="price">8% <small data-i18n="pc.pm">/ order value</small></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l31">Everything in Sourcing Sprint</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l32">Production follow-up &amp; photo/video QC</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l33">Consolidation, freight &amp; paperwork</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="pc.l34">Amazon FBA prep on request</span></li>
+          </ul>
+          <a class="btn btn-outline" href="#contact" data-i18n="pc.bt3">Discuss my order</a>
+        </div>
+      </div>
+      <div class="pricing-note reveal" data-i18n="pc.note">Typical China-sourcing agents charge 15–20% and hide the factory from you. We show you every quote and every factory name — our 8% is all we ever make.</div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head center reveal">
+        <div class="kicker" data-i18n="fq.k">FAQ</div>
+        <h2 data-i18n="fq.h2">Questions sellers ask us</h2>
+      </div>
+      <div class="faq-list reveal">
+        <details>
+          <summary data-i18n="fq.q1">What's the minimum order quantity?</summary>
+          <p data-i18n="fq.a1">Most categories work at 50–150 units with the factories we source from. Negotiating the MOQ down is part of the job — so you can test a product without burying yourself in inventory.</p>
+        </details>
+        <details>
+          <summary data-i18n="fq.q2">Do you mark up the product price?</summary>
+          <p data-i18n="fq.a2">No. You see the factory's own quotation and invoices. Our fee is a flat 8% of the order value — that's the only way we make money, and it's printed on every report.</p>
+        </details>
+        <details>
+          <summary data-i18n="fq.q3">How do payments work?</summary>
+          <p data-i18n="fq.a3">You can pay factories directly, or through our US entity via standard business channels — your choice. We never require 100% upfront: the standard is a 30% deposit and 70% after quality control passes.</p>
+        </details>
+        <details>
+          <summary data-i18n="fq.q4">How fast will goods arrive in the US?</summary>
+          <p data-i18n="fq.a4">Air freight runs 7–12 days door to door; sea freight 25–40 days. We handle formal customs entry for commercial batches and include a landed-cost estimate in every quote — no surprises at the border.</p>
+        </details>
+        <details>
+          <summary data-i18n="fq.q5">Can you ship straight to Amazon FBA?</summary>
+          <p data-i18n="fq.a5">Yes. We label and pack to Amazon's requirements, or deliver to your 3PL for final prep. FBA-bound shipments include the documentation checklist so nothing gets stuck at receiving.</p>
+        </details>
+        <details>
+          <summary data-i18n="fq.q6">What categories do you avoid?</summary>
+          <p data-i18n="fq.a6">For new clients we stay away from FDA-regulated goods, children's products, and certified electronics — compliance cost usually outweighs the margin. Almost everything else is fair game.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <div class="kicker" data-i18n="ct.k">Get started</div>
+        <h2 data-i18n="ct.h2">Tell us what you're sourcing</h2>
+        <p class="lead" data-i18n="ct.lead">Send a product link or photo and get three factory quotes within 48 hours — free, no strings. If you like what you see, we take it from there.</p>
+        <div class="contact-channels">
+          <a class="chan" href="mailto:hello@sourcebridge.co">
+            <span class="ci"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <span><b>Email</b><span>hello@sourcebridge.co</span></span>
+          </a>
+          <a class="chan" href="https://wa.me/15550102030">
+            <span class="ci"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-8.5 8.4 8.9 8.9 0 0 1-3.8-.9L3 21l1.9-5.2a8.3 8.3 0 0 1-.9-3.8 8.4 8.4 0 0 1 8.5-8.4 8.4 8.4 0 0 1 8.5 8.4Z"/></svg></span>
+            <span><b>WhatsApp</b><span>+1 (555) 010-2030</span></span>
+          </a>
+          <a class="chan" href="https://t.me/sourcebridge">
+            <span class="ci"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7Z"/></svg></span>
+            <span><b>Telegram</b><span>@sourcebridge</span></span>
+          </a>
+        </div>
+      </div>
+      <div class="form-card reveal" style="--d:.15s">
+        <h3 data-i18n="fm.h3">Free sourcing quote</h3>
+        <p class="fsub" data-i18n="fm.sub">Takes 30 seconds. Replies within 24 hours, Monday–Saturday.</p>
+        <form id="quoteForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="f-name" data-i18n="fm.name">Your name</label>
+              <input id="f-name" name="name" type="text" data-i18n-ph="ph.name" placeholder="Alex Carter" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" data-i18n-ph="ph.email" placeholder="alex@mybrand.com" required>
+            </div>
+            <div class="field full">
+              <label for="f-product" data-i18n="fm.product">Product link, ASIN, or description</label>
+              <input id="f-product" name="product" type="text" data-i18n-ph="ph.product" placeholder="https://amazon.com/dp/… or just describe it" required>
+            </div>
+            <div class="field full">
+              <label for="f-qty" data-i18n="fm.qty">Target quantity</label>
+              <select id="f-qty" name="qty">
+                <option data-i18n="fm.o1">Just researching</option>
+                <option selected data-i18n="fm.o2">50–150 units</option>
+                <option data-i18n="fm.o3">150–500 units</option>
+                <option data-i18n="fm.o4">500+ units</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="f-msg" data-i18n="fm.msg">Anything else? (optional)</label>
+              <textarea id="f-msg" name="message" data-i18n-ph="ph.msg" placeholder="Current supplier issues, target unit cost, deadlines…"></textarea>
+            </div>
+          </div>
+          <button class="btn btn-gold" type="submit" data-i18n="fm.btn">Get my free quotes</button>
+          <p class="form-hint" data-i18n="fm.hint">No spam, no obligations — just factory quotes with names on them.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <span class="mark"><svg viewBox="0 0 64 64" fill="none"><path d="M18 40c7 9 21 9 28 0" stroke="#D4A853" stroke-width="6" stroke-linecap="round"/><circle cx="32" cy="22" r="5" fill="#D4A853"/></svg></span>
+          SourceBridge
+        </div>
+        <p style="max-width:290px" data-i18n="ft.blurb">China-based sourcing partner for US e-commerce brands. Transparent quotes, flat 8%, and factories you can hold us to.</p>
+      </div>
+      <div>
+        <h4 data-i18n="ft.services">Services</h4>
+        <a href="#services" data-i18n="sv.t1">Product sourcing</a>
+        <a href="#services" data-i18n="sv.t2">Negotiation</a>
+        <a href="#services" data-i18n="sv.t4">Quality control</a>
+        <a href="#services" data-i18n="sv.t5">Freight &amp; FBA</a>
+      </div>
+      <div>
+        <h4 data-i18n="ft.company">Company</h4>
+        <a href="#about" data-i18n="ab.k">About</a>
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#pricing" data-i18n="nav.pricing">Pricing</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      </div>
+      <div>
+        <h4 data-i18n="ft.contact">Contact</h4>
+        <a href="mailto:hello@sourcebridge.co">hello@sourcebridge.co</a>
+        <a href="https://wa.me/15550102030">+1 (555) 010-2030</a>
+        <a href="https://t.me/sourcebridge">Telegram @sourcebridge</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year">2026</span> SourceBridge. <span data-i18n="ft.rights">All rights reserved.</span></span>
+      <span data-i18n="ft.line2">Quotes in USD · Serving US &amp; Canada sellers</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ WHATSAPP FLOAT ============ -->
+<a class="wa-fab" href="https://wa.me/15550102030" aria-label="Chat on WhatsApp">
+  <span class="tip" data-i18n="wa.tip">Chat with us</span>
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/>
+    <path d="M8.8 7.9c.2-.4.4-.4.6-.4h.6c.2 0 .4 0 .6.5l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.4 0 .6.3.5.8 1.1 1.4 1.5.5.4 1 .5 1.2.6.2 0 .4 0 .5-.2l.6-.7c.2-.2.4-.2.6-.1l1.5.8c.4.2.4.4.4.6 0 .3-.2 1.1-.6 1.4-.4.4-1 .6-1.6.6-1 0-2.6-.6-4-1.8-1.5-1.3-2.4-2.8-2.7-4-.2-1 .1-1.7.4-2.1Z"/>
+  </svg>
+</a>
+
+<script>
+/* ================= i18n ================= */
+const I18N = {
+en: {
+  "nav.services":"Services","nav.cases":"Case studies","nav.how":"How it works","nav.pricing":"Pricing","nav.faq":"FAQ","nav.cta":"Get a free quote",
+  "hero.badge":"Sourcing partner for US e-commerce brands",
+  "hero.h1a":"Source from Chinese factories — ","hero.h1b":"without the agent markup",
+  "hero.sub":"We find the factory, negotiate the price, inspect every batch, and ship to your US warehouse. One flat fee: 8%. You see every quote we see — factory names included.",
+  "hero.cta1":"Get a free sourcing quote","hero.cta2":"See how it works",
+  "hero.s1":"quote turnaround","hero.s2":"flat fee — agents charge 15–20%","hero.s3":"batches photo & video inspected",
+  "rep.title":"LED Ring Light 10\" — quotes","rep.sku":"Sent to 14 factories · 3 shortlisted",
+  "rep.fA":"Factory A","rep.fB":"Factory B","rep.fC":"Factory C","rep.pick":"Best pick",
+  "rep.unit":"/unit","rep.days":"days","rep.landed":"Landed cost est.","rep.qc":"QC PASSED",
+  "rep.chip1":"Flat fee","rep.chip2":"Photo & video QC on every batch",
+  "st.l1":"factories vetted & rated","st.l2":"average first quote turnaround","st.l3":"of batches inspected before shipping","st.l4":"flat fee — no hidden markup",
+  "strip.k":"BUILT FOR SELLERS ON",
+  "pr.k":"The problem","pr.h2":"The hidden tax on China sourcing",
+  "pr.lead":"Most sellers never see the real factory price. Here is where the money leaks.",
+  "pr.t1":"Your \u201Cfactory price\u201D isn't","pr.b1":"Agents quote 15–20% and bury their cut inside the unit price. You pay it on every single unit, forever.",
+  "pr.t2":"MOQ roulette","pr.b2":"You find the perfect product — attached to a 5,000-unit minimum. Cash gets stuck in inventory you never wanted.",
+  "pr.t3":"Quality surprises","pr.b3":"Defects surface after the container lands in the US. At that point the goods, the freight, and the problem are all yours.",
+  "pr.more":"There's a better model",
+  "sv.k":"Services","sv.h2":"Everything between \u201CI want this product\u201D and \u201Cit's on my shelf\u201D",
+  "sv.lead":"One partner for the whole chain — sourcing, negotiation, quality, and freight. No hand-offs, no markups in the middle.",
+  "sv.t1":"Product sourcing","sv.b1":"Send a link, a photo, or a sketch. You get 3+ verified factories with real prices, MOQs, and lead times — factory names included.",
+  "sv.t2":"Negotiation","sv.b2":"We negotiate in person, in Mandarin, on the factory floor. Clients typically save 10–25% versus agent-listed prices.",
+  "sv.t3":"Sampling","sv.b3":"Samples from your shortlist in 5–10 days, consolidated into one shipment so you compare quality side by side.",
+  "sv.t4":"Quality control","sv.b4":"Every batch inspected before it leaves the factory: photo & video report, defect counts, fixes made on-site.",
+  "sv.t5":"Freight & delivery","sv.b5":"Multiple suppliers, one shipment. Air freight in 7–12 days or sea in 25–40, delivered to your 3PL or Amazon FBA.",
+  "sv.t6":"Re-order management","sv.b6":"Repeat orders on autopilot: same factory, locked-in price, scheduled QC. Your inventory never waits on emails.",
+  "cs.k":"Case studies","cs.h2":"Real numbers, real orders",
+  "cs.lead":"What transparent sourcing does to a P&L. Figures below are illustrative — your results will be your own.",
+  "cs.tag1":"Home & kitchen · Amazon","cs.n1l":"unit cost","cs.t1":"From middleman to factory",
+  "cs.b1":"Swapped an AliExpress middleman for the actual factory. Same product, re-negotiated tooling and packaging — margin rebuilt in one order.",
+  "cs.tag2":"New brand · TikTok Shop","cs.n2l":"cheaper product test","cs.t2":"MOQ: 1,000 → 150 units",
+  "cs.b2":"Minimum negotiated from 1,000 to 150 units — a full shelf test on a sixth of the budget. The brand launched two months earlier.",
+  "cs.tag3":"Gadgets · Amazon FBA","cs.n3l":"defects caught pre-shipment","cs.t3":"Video QC saved a season",
+  "cs.b3":"Video QC flagged a bad batch before it left the plant. Re-made in 5 days — zero returns, zero stuck inventory.",
+  "hw.k":"How it works","hw.h2":"From idea to warehouse in four steps",
+  "hw.lead":"You always know what's happening — every step comes with a report you can verify.",
+  "hw.t1":"Send your product","hw.b1":"A link, an ASIN, a photo, or a rough sketch. Within 48 hours you get a free feasibility read and 3 factory quotes.",
+  "hw.t2":"Compare real quotes","hw.b2":"Prices, MOQs, lead times — with factory names, not \u201Cour trusted partner\u201D. You pick, we negotiate the final terms.",
+  "hw.t3":"Approve a sample","hw.b3":"Samples from your shortlist arrive in about a week. You approve quality in your hands before any bulk commitment.",
+  "hw.t4":"We produce & ship","hw.b4":"Production follow-up, photo/video QC before release, consolidation, and freight to your US warehouse or FBA.",
+  "cl.k":"Do the math","cl.h2":"What is your agent really costing you?",
+  "cl.lead":"Drag the slider to your typical order value and see the difference a flat 8% makes — on every order, every month.",
+  "cl.lbl":"Your typical order value","cl.agentL":"Typical agent (15–20%)","cl.oursL":"SourceBridge (flat 8%)",
+  "cl.save":"You keep on every order","cl.note":"Estimate only — typical agent commissions run 15–20%; we used 18% for comparison.",
+  "tr.k":"Trust & guarantees","tr.h2":"Why it's safe to send money through us",
+  "tr.lead":"Four rules we never break.",
+  "tr.t1":"30 / 70 — never 100% upfront","tr.b1":"You pay a 30% deposit to start production. The remaining 70% — only after your batch passes QC, with photo and video proof.",
+  "tr.t2":"Factory invoices, zero markup","tr.b2":"You receive the factory's original quotation and invoice. Our 8% is a separate line item — always visible, never hidden in the price.",
+  "tr.t3":"Evidence at every step","tr.b3":"Photos at 30%, 70% and 100% of production. A full inspection report before anything ships — you see what we see.",
+  "tr.t4":"US entity, real contracts","tr.b4":"Payments go through our US-registered company under a signed service agreement — not a personal wallet.",
+  "ab.k":"About","ab.h2":"The people between you and the factory",
+  "ab.p1":"SourceBridge is a small, senior team based in China and the United States. We walk factory floors every week, speak the language, and answer in plain English — no agent theater.",
+  "ab.p2":"We built this service the way we'd want it as sellers ourselves: every quote transparent, every factory named, every batch inspected.",
+  "ab.f1":"On the ground in China's manufacturing hubs — weekly factory visits",
+  "ab.f2":"US-registered partner company for payments and contracts",
+  "ab.f3":"One point of contact, from first quote to final delivery",
+  "ab.cap":"( placeholder — add your photo here )",
+  "tm.k":"Testimonials","tm.h2":"What clients say",
+  "tm.q1":"Finally saw what a factory invoice actually looks like. The 8% paid for itself on the first order.",
+  "tm.r1":"Amazon seller · home & kitchen",
+  "tm.q2":"They caught a defective batch on video before it shipped. That one report saved me an entire season.",
+  "tm.r2":"TikTok Shop brand owner",
+  "tm.q3":"MOQ dropped from 1,000 to 150 — I finally test products like a startup, not a casino.",
+  "tm.r3":"Shopify · 4 stores",
+  "tm.note":"Sample reviews shown for layout — replace with your real client quotes.",
+  "pc.k":"Pricing","pc.h2":"Simple, transparent, credited forward",
+  "pc.lead":"Start free. Pay only when you see the value — literally, in factory quotes with names on them.",
+  "pc.n1":"Free Report","pc.d1":"See what your product really costs at the factory.",
+  "pc.l11":"3 factory quotes with names","pc.l12":"Landed-cost estimate","pc.l13":"48-hour turnaround","pc.bt1":"Start free",
+  "pc.chip":"Most popular","pc.n2":"Sourcing Sprint","pc.d2":"Full sourcing for one product, start to samples.",
+  "pc.l21":"Deep supplier search & vetting","pc.l22":"Negotiated pricing & MOQ terms","pc.l23":"Consolidated samples, QC report","pc.l24":"Credited toward first order commission","pc.bt2":"Run my sprint",
+  "pc.n3":"Full Service Order","pc.d3":"We handle the entire order, end to end.","pc.pm":"/ order value",
+  "pc.l31":"Everything in Sourcing Sprint","pc.l32":"Production follow-up & photo/video QC","pc.l33":"Consolidation, freight & paperwork","pc.l34":"Amazon FBA prep on request","pc.bt3":"Discuss my order",
+  "pc.note":"Typical China-sourcing agents charge 15–20% and hide the factory from you. We show you every quote and every factory name — our 8% is all we ever make.",
+  "fq.k":"FAQ","fq.h2":"Questions sellers ask us",
+  "fq.q1":"What's the minimum order quantity?","fq.a1":"Most categories work at 50–150 units with the factories we source from. Negotiating the MOQ down is part of the job — so you can test a product without burying yourself in inventory.",
+  "fq.q2":"Do you mark up the product price?","fq.a2":"No. You see the factory's own quotation and invoices. Our fee is a flat 8% of the order value — that's the only way we make money, and it's printed on every report.",
+  "fq.q3":"How do payments work?","fq.a3":"You can pay factories directly, or through our US entity via standard business channels — your choice. We never require 100% upfront: the standard is a 30% deposit and 70% after quality control passes.",
+  "fq.q4":"How fast will goods arrive in the US?","fq.a4":"Air freight runs 7–12 days door to door; sea freight 25–40 days. We handle formal customs entry for commercial batches and include a landed-cost estimate in every quote — no surprises at the border.",
+  "fq.q5":"Can you ship straight to Amazon FBA?","fq.a5":"Yes. We label and pack to Amazon's requirements, or deliver to your 3PL for final prep. FBA-bound shipments include the documentation checklist so nothing gets stuck at receiving.",
+  "fq.q6":"What categories do you avoid?","fq.a6":"For new clients we stay away from FDA-regulated goods, children's products, and certified electronics — compliance cost usually outweighs the margin. Almost everything else is fair game.",
+  "ct.k":"Get started","ct.h2":"Tell us what you're sourcing",
+  "ct.lead":"Send a product link or photo and get three factory quotes within 48 hours — free, no strings. If you like what you see, we take it from there.",
+  "fm.h3":"Free sourcing quote","fm.sub":"Takes 30 seconds. Replies within 24 hours, Monday–Saturday.",
+  "fm.name":"Your name","fm.product":"Product link, ASIN, or description","fm.qty":"Target quantity","fm.msg":"Anything else? (optional)",
+  "fm.o1":"Just researching","fm.o2":"50–150 units","fm.o3":"150–500 units","fm.o4":"500+ units",
+  "fm.btn":"Get my free quotes","fm.hint":"No spam, no obligations — just factory quotes with names on them.",
+  "ph.name":"Alex Carter","ph.email":"alex@mybrand.com","ph.product":"https://amazon.com/dp/… or just describe it",
+  "ph.msg":"Current supplier issues, target unit cost, deadlines…",
+  "wa.tip":"Chat with us",
+  "ft.blurb":"China-based sourcing partner for US e-commerce brands. Transparent quotes, flat 8%, and factories you can hold us to.",
+  "ft.services":"Services","ft.company":"Company","ft.contact":"Contact","ft.rights":"All rights reserved.",
+  "ft.line2":"Quotes in USD · Serving US & Canada sellers"
+},
+ru: {
+  "nav.services":"Услуги","nav.cases":"Кейсы","nav.how":"Как это работает","nav.pricing":"Цены","nav.faq":"Вопросы","nav.cta":"Бесплатный расчёт",
+  "hero.badge":"Закупки в Китае для продавцов на маркетплейсах США",
+  "hero.h1a":"Товары напрямую с китайских фабрик — ","hero.h1b":"без наценки посредников",
+  "hero.sub":"Находим фабрику, договариваемся о цене, проверяем каждую партию и доставляем на ваш склад в США. Одна прозрачная комиссия — 8%. Вы видите все котировки, которые видим мы, — вплоть до имён фабрик.",
+  "hero.cta1":"Получить бесплатный расчёт","hero.cta2":"Как это работает",
+  "hero.s1":"котировка за 48 часов","hero.s2":"фиксированные 8% — посредники берут 15–20%","hero.s3":"партий проверяются с фото и видео",
+  "rep.title":"Кольцевая лампа 10\" — котировки","rep.sku":"Запрошено 14 фабрик · отобраны 3",
+  "rep.fA":"Фабрика A","rep.fB":"Фабрика B","rep.fC":"Фабрика C","rep.pick":"Лучший выбор",
+  "rep.unit":"/шт","rep.days":"дней","rep.landed":"Себестоимость с доставкой","rep.qc":"ПРОВЕРЕНО",
+  "rep.chip1":"Комиссия","rep.chip2":"Фото- и видео-контроль каждой партии",
+  "st.l1":"фабрик проверено и оценено","st.l2":"средний срок первой котировки","st.l3":"партий проверяется перед отправкой","st.l4":"фиксированная комиссия — без скрытых наценок",
+  "strip.k":"САЙТ ДЛЯ ПРОДАВЦОВ НА",
+  "pr.k":"Проблема","pr.h2":"Скрытый налог на закупки в Китае",
+  "pr.lead":"Большинство продавцов никогда не видят реальную цену фабрики. Вот где утекают деньги.",
+  "pr.t1":"Ваша «цена фабрики» — не цена фабрики","pr.b1":"Посредники закладывают 15–20% и прячут свою наценку в цене за единицу. Вы платите её с каждой единицы, всегда.",
+  "pr.t2":"Рулетка минимальной партии","pr.b2":"Нашли идеальный товар — а к нему минимальный заказ 5 000 штук. Деньги застревают в запасах, которые вам не нужны.",
+  "pr.t3":"Сюрпризы с качеством","pr.b3":"Дефекты всплывают после того, как контейнер пришёл в США. И тогда товар, доставка и проблема — всё ваше.",
+  "pr.more":"Есть модель лучше",
+  "sv.k":"Услуги","sv.h2":"Всё между «хочу этот товар» и «он уже на моём складе»",
+  "sv.lead":"Один партнёр на всю цепочку — поиск, переговоры, качество и доставка. Без передач из рук в руки и наценок посередине.",
+  "sv.t1":"Поиск товара","sv.b1":"Пришлите ссылку, фото или эскиз. Получаете 3+ проверенные фабрики с реальными ценами, минимальными партиями и сроками — с названиями фабрик.",
+  "sv.t2":"Переговоры","sv.b2":"Мы договариваемся лично, на языке фабрики. Клиенты обычно экономят 10–25% против цен посредников.",
+  "sv.t3":"Образцы","sv.b3":"Образцы из вашего шорт-листа за 5–10 дней одной посылкой — сравниваете качество бок о бок.",
+  "sv.t4":"Контроль качества","sv.b4":"Каждая партия проверяется до отгрузки с фабрики: фото- и видеоотчёт, подсчёт дефектов, исправления на месте.",
+  "sv.t5":"Доставка","sv.b5":"Несколько поставщиков — одна отгрузка. Авиа 7–12 дней или море 25–40, до вашего склада или Amazon FBA.",
+  "sv.t6":"Повторные заказы","sv.b6":"Регулярные заказы на автомате: та же фабрика, зафиксированная цена, QC по расписанию. Ваш склад не ждёт писем.",
+  "cs.k":"Кейсы","cs.h2":"Настоящие цифры, настоящие заказы",
+  "cs.lead":"Вот что прозрачная закупка делает с экономикой магазина. Цифры ниже — иллюстративные, ваши результаты будут своими.",
+  "cs.tag1":"Дом и кухня · Amazon","cs.n1l":"цена за единицу","cs.t1":"От посредника — к фабрике",
+  "cs.b1":"Заменили посредника с AliExpress на реальную фабрику. Тот же товар, пересмотрели оснастку и упаковку — маржа восстановлена за один заказ.",
+  "cs.tag2":"Новый бренд · TikTok Shop","cs.n2l":"дешевле тест товара","cs.t2":"Минимум: 1 000 → 150 штук",
+  "cs.b2":"Минимальную партию снизили с 1 000 до 150 штук — полный тест полки за шестую часть бюджета. Бренд запустился на два месяца раньше.",
+  "cs.tag3":"Гаджеты · Amazon FBA","cs.n3l":"дефектов поймано до отгрузки","cs.t3":"Видео-контроль спас сезон",
+  "cs.b3":"Видео-контроль поймал бракованную партию до отгрузки с завода. Переделали за 5 дней — ноль возвратов и зависшего товара.",
+  "hw.k":"Как это работает","hw.h2":"От идеи до склада за четыре шага",
+  "hw.lead":"Вы всегда знаете, что происходит — каждый шаг подкреплён отчётом, который можно проверить.",
+  "hw.t1":"Пришлите товар","hw.b1":"Ссылка, ASIN, фото или набросок. В течение 48 часов — бесплатная оценка и 3 котировки фабрик.",
+  "hw.t2":"Сравните реальные цены","hw.b2":"Цены, минимальные партии, сроки — с именами фабрик, а не «наш проверенный партнёр». Вы выбираете, мы согласовываем финальные условия.",
+  "hw.t3":"Одобрите образец","hw.b3":"Образцы приходят примерно за неделю. Вы оцениваете качество в руках до любого крупного заказа.",
+  "hw.t4":"Мы производим и отправляем","hw.b4":"Контроль производства, фото/видео QC перед выпуском, консолидация и доставка на ваш склад в США или в FBA.",
+  "cl.k":"Посчитайте","cl.h2":"Сколько на самом деле стоит ваш посредник?",
+  "cl.lead":"Подвигайте ползунок к обычной сумме вашего заказа — и увидьте разницу, которую даёт фиксированных 8%, с каждого заказа, каждый месяц.",
+  "cl.lbl":"Обычная сумма вашего заказа","cl.agentL":"Обычный посредник (15–20%)","cl.oursL":"SourceBridge (фикс. 8%)",
+  "cl.save":"Ваша экономия с каждого заказа","cl.note":"Это оценка — обычные комиссии посредников 15–20%, для сравнения мы взяли 18%.",
+  "tr.k":"Гарантии и доверие","tr.h2":"Почему переводить деньги через нас безопасно",
+  "tr.lead":"Четыре правила, которые мы не нарушаем никогда.",
+  "tr.t1":"30 / 70 — никогда не 100% вперёд","tr.b1":"Вы вносите депозит 30% на запуск производства. Остальные 70% — только после того, как партия пройдёт проверку, с фото- и видеоподтверждением.",
+  "tr.t2":"Счёт фабрики — без наценки","tr.b2":"Вы получаете оригинальную котировку и счёт фабрики. Наши 8% — отдельной строкой: всегда на виду, никогда не спрятаны в цене.",
+  "tr.t3":"Подтверждение на каждом шаге","tr.b3":"Фото на 30%, 70% и 100% производства. Полный отчёт проверки перед отгрузкой — вы видите то же, что и мы.",
+  "tr.t4":"Компания в США, настоящие договоры","tr.b4":"Оплаты проходят через нашу компанию в США по подписанному договору об услугах — не через личные кошельки.",
+  "ab.k":"О нас","ab.h2":"Люди между вами и фабрикой",
+  "ab.p1":"SourceBridge — небольшая команда с многолетним опытом, живущая в Китае и США. Мы ездим на фабрики каждую неделю, говорим на языке фабрики и отвечаем по-человечески — без агентского театра.",
+  "ab.p2":"Мы построили сервис таким, каким хотели бы видеть его на месте продавцов: каждая котировка прозрачна, каждая фабрика названа, каждая партия проверена.",
+  "ab.f1":"На месте в производственных центрах Китая — выезды на фабрики каждую неделю",
+  "ab.f2":"Компания-партнёр в США для оплаты и договоров",
+  "ab.f3":"Один контакт от первой котировки до финальной доставки",
+  "ab.cap":"( заглушка — поставьте здесь своё фото )",
+  "tm.k":"Отзывы","tm.h2":"Что говорят клиенты",
+  "tm.q1":"Наконец увидел, как выглядит настоящий счёт фабрики. 8% окупились с первого заказа.",
+  "tm.r1":"продавец на Amazon · дом и кухня",
+  "tm.q2":"Они поймали брак на видео до отгрузки. Один этот отчёт спас мне целый сезон.",
+  "tm.r2":"владелец бренда на TikTok Shop",
+  "tm.q3":"Минимум упал с 1 000 до 150 — я наконец тестирую товары как стартап, а не как в казино.",
+  "tm.r3":"Shopify · 4 магазина",
+  "tm.note":"Это демонстрационные отзывы для макета — замените настоящими отзывами клиентов.",
+  "pc.k":"Цены","pc.h2":"Просто, прозрачно, с зачётом вперёд",
+  "pc.lead":"Начните бесплатно. Платите, только увидев ценность — буквально, в котировках фабрик с именами.",
+  "pc.n1":"Бесплатный отчёт","pc.d1":"Узнайте, сколько ваш товар реально стоит на фабрике.",
+  "pc.l11":"3 котировки фабрик с названиями","pc.l12":"Оценка себестоимости с доставкой","pc.l13":"Готово за 48 часов","pc.bt1":"Начать бесплатно",
+  "pc.chip":"Популярный","pc.n2":"Sourcing Sprint","pc.d2":"Полный подбор одного товара — до образцов.",
+  "pc.l21":"Глубокий поиск и проверка поставщиков","pc.l22":"Согласованные цены и минимальные партии","pc.l23":"Образцы одной посылкой, отчёт QC","pc.l24":"Засчитывается в комиссию первого заказа","pc.bt2":"Запустить спринт",
+  "pc.n3":"Полное сопровождение","pc.d3":"Ведём весь заказ от начала до конца.","pc.pm":"/ от суммы заказа",
+  "pc.l31":"Всё из Sourcing Sprint","pc.l32":"Контроль производства и фото/видео QC","pc.l33":"Консолидация, фрахт и документы","pc.l34":"Подготовка под Amazon FBA по запросу","pc.bt3":"Обсудить заказ",
+  "pc.note":"Обычные посредники берут 15–20% и прячут от вас фабрику. Мы показываем каждую котировку и каждое имя — наши 8% это всё, что мы зарабатываем.",
+  "fq.k":"Вопросы","fq.h2":"Что спрашивают продавцы",
+  "fq.q1":"Какая минимальная партия?","fq.a1":"В большинстве категорий фабрики, с которыми мы работаем, начинают со 100–150 штук. Снизить минимум — часть нашей работы, чтобы вы тестировали товар без лишних запасов.",
+  "fq.q2":"Вы накидываете наценку к цене товара?","fq.a2":"Нет. Вы видите собственные котировки и счета фабрики. Наш гонорар — фиксированные 8% от суммы заказа, и это единственный способ, которым мы зарабатываем.",
+  "fq.q3":"Как проходят оплаты?","fq.a3":"Можно платить фабрике напрямую или через нашу компанию в США стандартными способами — как вам удобнее. Мы никогда не требуем 100% вперёд: стандарт — депозит 30% и остаток после приёмки качества.",
+  "fq.q4":"Как быстро товар доедет до США?","fq.a4":"Авиа — 7–12 дней «от двери до двери», море — 25–40 дней. Мы оформляем формальную таможенную очистку для коммерческих партий и включаем оценку полной стоимости в каждую котировку — без сюрпризов на границе.",
+  "fq.q5":"Можете отправлять прямо в Amazon FBA?","fq.a5":"Да. Маркируем и упаковываем по требованиям Amazon или привозим на ваш 3PL для финальной подготовки. В отгрузки для FBA входит чек-лист документов, чтобы ничего не застряло на приёмке.",
+  "fq.q6":"С какими категориями не работаете?","fq.a6":"С новыми клиентами мы не берём товары под контролем FDA, детские товары и сертифицированную электронику — стоимость соответствия обычно съедает маржу. Почти всё остальное — можно.",
+  "ct.k":"Начнём","ct.h2":"Расскажите, что вы ищете",
+  "ct.lead":"Пришлите ссылку на товар или фото — и получите три котировки фабрик за 48 часов, бесплатно и без обязательств. Понравится — продолжим.",
+  "fm.h3":"Бесплатный расчёт","fm.sub":"Займёт 30 секунд. Отвечаем в течение 24 часов, с понедельника по субботу.",
+  "fm.name":"Ваше имя","fm.product":"Ссылка на товар, ASIN или описание","fm.qty":"Целевое количество","fm.msg":"Что-то ещё? (необязательно)",
+  "fm.o1":"Просто изучаю","fm.o2":"50–150 шт","fm.o3":"150–500 шт","fm.o4":"500+ шт",
+  "fm.btn":"Получить расчёты","fm.hint":"Без спама и обязательств — просто цены фабрик с названиями.",
+  "ph.name":"Алекс Картер","ph.email":"alex@mybrand.com","ph.product":"https://amazon.com/dp/… или просто опишите",
+  "ph.msg":"Проблемы с текущим поставщиком, целевая цена, сроки…",
+  "wa.tip":"Написать нам",
+  "ft.blurb":"Партнёр по закупкам в Китае для брендов электронной торговли США. Прозрачные котировки, фикс 8% и фабрики, за которые мы отвечаем.",
+  "ft.services":"Услуги","ft.company":"Компания","ft.contact":"Контакты","ft.rights":"Все права защищены.",
+  "ft.line2":"Расчёты в USD · Работаем с продавцами США и Канады"
+},
+es: {
+  "nav.services":"Servicios","nav.cases":"Casos","nav.how":"Cómo funciona","nav.pricing":"Precios","nav.faq":"Preguntas","nav.cta":"Cotización gratis",
+  "hero.badge":"Socio de abastecimiento para marcas de e-commerce de EE. UU.",
+  "hero.h1a":"Abastece directamente de fábricas chinas — ","hero.h1b":"sin el margen del intermediario",
+  "hero.sub":"Encontramos la fábrica, negociamos el precio, inspeccionamos cada lote y enviamos a tu almacén en EE. UU. Una comisión transparente: 8%. Ves cada cotización que vemos nosotros, con los nombres de las fábricas.",
+  "hero.cta1":"Cotización gratis","hero.cta2":"Ver cómo funciona",
+  "hero.s1":"cotizaciones en 48 h","hero.s2":"comisión fija — los agentes cobran 15–20%","hero.s3":"de los lotes inspeccionados con foto y video",
+  "rep.title":"Anillo LED 10\" — cotizaciones","rep.sku":"14 fábricas consultadas · 3 preseleccionadas",
+  "rep.fA":"Fábrica A","rep.fB":"Fábrica B","rep.fC":"Fábrica C","rep.pick":"Mejor opción",
+  "rep.unit":"/ud","rep.days":"días","rep.landed":"Costo entregado est.","rep.qc":"QC OK",
+  "rep.chip1":"Comisión","rep.chip2":"QC con foto y video en cada lote",
+  "st.l1":"fábricas verificadas y evaluadas","st.l2":"plazo medio de la primera cotización","st.l3":"de los lotes inspeccionados antes de enviar","st.l4":"comisión fija — sin margen oculto",
+  "strip.k":"HECHO PARA VENDEDORES EN",
+  "pr.k":"El problema","pr.h2":"El impuesto oculto de abastecerse en China",
+  "pr.lead":"La mayoría de los vendedores nunca ve el precio real de fábrica. Aquí es donde se fuga el dinero.",
+  "pr.t1":"Tu \u201Cprecio de fábrica\u201D no lo es","pr.b1":"Los agentes cobran 15–20% y esconden su comisión dentro del precio unitario. La pagas en cada unidad, para siempre.",
+  "pr.t2":"Ruleta del pedido mínimo","pr.b2":"Encuentras el producto perfecto — con un mínimo de 5.000 unidades. Tu dinero queda atrapado en inventario que no querías.",
+  "pr.t3":"Sorpresas de calidad","pr.b3":"Los defectos aparecen cuando el contenedor ya llegó a EE. UU. Para entonces la mercancía, el flete y el problema son tuyos.",
+  "pr.more":"Hay un modelo mejor",
+  "sv.k":"Servicios","sv.h2":"Todo entre \u201Cquiero este producto\u201D y \u201Cya está en mi estante\u201D",
+  "sv.lead":"Un socio para toda la cadena — búsqueda, negociación, calidad y flete. Sin intermediarios ni márgenes ocultos.",
+  "sv.t1":"Búsqueda de producto","sv.b1":"Envía un enlace, una foto o un boceto. Recibes 3+ fábricas verificadas con precios reales, mínimos y plazos — con sus nombres.",
+  "sv.t2":"Negociación","sv.b2":"Negociamos en persona, en mandarín, en la fábrica. Los clientes suelen ahorrar 10–25% frente a los precios de los agentes.",
+  "sv.t3":"Muestras","sv.b3":"Muestras de tu lista en 5–10 días, consolidadas en un solo envío para comparar la calidad lado a lado.",
+  "sv.t4":"Control de calidad","sv.b4":"Cada lote se inspecciona antes de salir de la fábrica: informe con fotos y video, recuento de defectos, correcciones en sitio.",
+  "sv.t5":"Envío y entrega","sv.b5":"Varios proveedores, un solo envío. Aéreo en 7–12 días o marítimo en 25–40, hasta tu 3PL o Amazon FBA.",
+  "sv.t6":"Pedidos recurrentes","sv.b6":"Pedidos repetidos en automático: misma fábrica, precio bloqueado, QC programado. Tu inventario nunca espera correos.",
+  "cs.k":"Casos","cs.h2":"Números reales, pedidos reales",
+  "cs.lead":"Esto es lo que el abastecimiento transparente hace con las cuentas. Las cifras son ilustrativas — tus resultados serán tuyos.",
+  "cs.tag1":"Hogar y cocina · Amazon","cs.n1l":"costo unitario","cs.t1":"Del intermediario a la fábrica",
+  "cs.b1":"Cambiamos un intermediario de AliExpress por la fábrica real. Mismo producto, herramienta y empaque renegociados — margen reconstruido en un pedido.",
+  "cs.tag2":"Marca nueva · TikTok Shop","cs.n2l":"más barato probar","cs.t2":"Mínimo: 1.000 → 150 uds",
+  "cs.b2":"Negociamos el mínimo de 1.000 a 150 unidades — una prueba completa por la sexta parte del presupuesto. La marca lanzó dos meses antes.",
+  "cs.tag3":"Gadgets · Amazon FBA","cs.n3l":"defectos detectados pre-envío","cs.t3":"El QC en video salvó una temporada",
+  "cs.b3":"El QC en video detectó un lote defectuoso antes de salir de la planta. Rehecho en 5 días — cero devoluciones, cero inventario atascado.",
+  "hw.k":"Cómo funciona","hw.h2":"De la idea al almacén en cuatro pasos",
+  "hw.lead":"Siempre sabes qué está pasando — cada paso incluye un informe verificable.",
+  "hw.t1":"Envía tu producto","hw.b1":"Un enlace, un ASIN, una foto o un boceto. En 48 horas tienes una evaluación gratuita y 3 cotizaciones de fábricas.",
+  "hw.t2":"Compara cotizaciones reales","hw.b2":"Precios, mínimos y plazos — con nombres de fábricas, no \u201Cnuestro socio confiable\u201D. Tú eliges, nosotros cerramos los términos.",
+  "hw.t3":"Aprueba la muestra","hw.b3":"Las muestras de tu lista llegan en una semana aproximadamente. Apruebas la calidad en tus manos antes de cualquier pedido grande.",
+  "hw.t4":"Producimos y enviamos","hw.b4":"Seguimiento de producción, QC con foto/video antes de despachar, consolidación y flete a tu almacén en EE. UU. o FBA.",
+  "cl.k":"Haz números","cl.h2":"¿Cuánto te cuesta realmente tu agente?",
+  "cl.lead":"Mueve el control al valor típico de tu pedido y mira la diferencia que hace un 8% fijo — en cada pedido, cada mes.",
+  "cl.lbl":"Valor típico de tu pedido","cl.agentL":"Agente típico (15–20%)","cl.oursL":"SourceBridge (8% fijo)",
+  "cl.save":"Ahorras en cada pedido","cl.note":"Solo una estimación — las comisiones típicas van del 15 al 20%; usamos 18% para comparar.",
+  "tr.k":"Garantías y confianza","tr.h2":"Por qué es seguro enviarnos dinero",
+  "tr.lead":"Cuatro reglas que nunca rompemos.",
+  "tr.t1":"30 / 70 — nunca 100% por adelantado","tr.b1":"Pagas un depósito del 30% para iniciar producción. El 70% restante — solo después de que tu lote pase el QC, con prueba en foto y video.",
+  "tr.t2":"Facturas de fábrica, sin margen","tr.b2":"Recibes la cotización y factura original de la fábrica. Nuestro 8% es una línea aparte — siempre visible, nunca escondida en el precio.",
+  "tr.t3":"Evidencia en cada paso","tr.b3":"Fotos al 30%, 70% y 100% de la producción. Informe de inspección completo antes de enviar cualquier cosa — ves lo que vemos.",
+  "tr.t4":"Empresa en EE. UU., contratos reales","tr.b4":"Los pagos pasan por nuestra empresa registrada en EE. UU. bajo un contrato de servicios firmado — no un monedero personal.",
+  "ab.k":"Quiénes somos","ab.h2":"La gente entre tú y la fábrica",
+  "ab.p1":"SourceBridge es un equipo pequeño y senior con base en China y Estados Unidos. Recorremos fábricas cada semana, hablamos el idioma y respondemos en inglés claro — sin teatro de agencia.",
+  "ab.p2":"Construimos este servicio como quisiéramos recibirlo siendo vendedores: cada cotización transparente, cada fábrica con nombre, cada lote inspeccionado.",
+  "ab.f1":"En el terreno de los polos industriales de China — visitas semanales a fábricas",
+  "ab.f2":"Empresa socia registrada en EE. UU. para pagos y contratos",
+  "ab.f3":"Un solo interlocutor, de la primera cotización a la entrega final",
+  "ab.cap":"( marcador de posición — añade aquí tu foto )",
+  "tm.k":"Testimonios","tm.h2":"Lo que dicen los clientes",
+  "tm.q1":"Por fin vi cómo es una factura de fábrica de verdad. El 8% se pagó solo en el primer pedido.",
+  "tm.r1":"vendedor en Amazon · hogar y cocina",
+  "tm.q2":"Detectaron un lote defectuoso en video antes del envío. Ese informe me salvó una temporada entera.",
+  "tm.r2":"dueña de marca en TikTok Shop",
+  "tm.q3":"El mínimo bajó de 1.000 a 150 — por fin pruebo productos como un startup, no como en un casino.",
+  "tm.r3":"Shopify · 4 tiendas",
+  "tm.note":"Reseñas de muestra para el maquetado — reemplázalas con citas reales de clientes.",
+  "pc.k":"Precios","pc.h2":"Simple, transparente, con crédito",
+  "pc.lead":"Empieza gratis. Paga solo cuando veas el valor — literalmente, en cotizaciones con nombres.",
+  "pc.n1":"Informe gratuito","pc.d1":"Descubre cuánto cuesta realmente tu producto en fábrica.",
+  "pc.l11":"3 cotizaciones con nombres","pc.l12":"Estimación de costo entregado","pc.l13":"Respuesta en 48 horas","pc.bt1":"Empezar gratis",
+  "pc.chip":"Más popular","pc.n2":"Sourcing Sprint","pc.d2":"Búsqueda completa de un producto, hasta muestras.",
+  "pc.l21":"Búsqueda y verificación de proveedores","pc.l22":"Precios y mínimos negociados","pc.l23":"Muestras consolidadas, informe QC","pc.l24":"Se acredita a la comisión del primer pedido","pc.bt2":"Iniciar mi sprint",
+  "pc.n3":"Servicio completo","pc.d3":"Gestionamos todo el pedido de punta a punta.","pc.pm":"/ valor del pedido",
+  "pc.l31":"Todo lo del Sourcing Sprint","pc.l32":"Seguimiento de producción y QC foto/video","pc.l33":"Consolidación, flete y papeleo","pc.l34":"Preparación Amazon FBA a pedido","pc.bt3":"Hablar de mi pedido",
+  "pc.note":"Los agentes típicos cobran 15–20% y te esconden la fábrica. Nosotros mostramos cada cotización y cada nombre — nuestro 8% es todo lo que ganamos.",
+  "fq.k":"Preguntas","fq.h2":"Lo que nos preguntan los vendedores",
+  "fq.q1":"¿Cuál es el pedido mínimo?","fq.a1":"En la mayoría de categorías, las fábricas con las que trabajamos empiezan en 100–150 unidades. Bajar el mínimo es parte del trabajo — para que pruebes productos sin ahogarte en inventario.",
+  "fq.q2":"¿Añaden margen al precio del producto?","fq.a2":"No. Ves las cotizaciones y facturas de la propia fábrica. Nuestro honorario es un 8% fijo del valor del pedido — es la única forma en que ganamos dinero.",
+  "fq.q3":"¿Cómo funcionan los pagos?","fq.a3":"Puedes pagar a las fábricas directamente o a través de nuestra empresa en EE. UU. por canales estándar — tú eliges. Nunca exigimos 100% por adelantado: el estándar es 30% de depósito y 70% tras pasar el control de calidad.",
+  "fq.q4":"¿Qué tan rápido llega a EE. UU.?","fq.a4":"Aéreo: 7–12 días puerta a puerta; marítimo: 25–40 días. Gestionamos la entrada aduanera formal para lotes comerciales e incluimos el costo entregado en cada cotización — sin sorpresas en la frontera.",
+  "fq.q5":"¿Pueden enviar directo a Amazon FBA?","fq.a5":"Sí. Etiquetamos y empacamos según los requisitos de Amazon o entregamos en tu 3PL para el prep final. Los envíos a FBA incluyen el checklist de documentación.",
+  "fq.q6":"¿Qué categorías evitan?","fq.a6":"Con clientes nuevos evitamos productos regulados por la FDA, artículos infantiles y electrónica certificada — el costo de cumplimiento suele comerse el margen. Casi todo lo demás, sí.",
+  "ct.k":"Empieza","ct.h2":"Cuéntanos qué buscas",
+  "ct.lead":"Envía un enlace o foto del producto y recibe tres cotizaciones de fábricas en 48 horas — gratis, sin compromiso. Si te gusta, seguimos.",
+  "fm.h3":"Cotización gratis","fm.sub":"Toma 30 segundos. Respondemos en 24 horas, de lunes a sábado.",
+  "fm.name":"Tu nombre","fm.product":"Enlace del producto, ASIN o descripción","fm.qty":"Cantidad objetivo","fm.msg":"¿Algo más? (opcional)",
+  "fm.o1":"Solo explorando","fm.o2":"50–150 uds","fm.o3":"150–500 uds","fm.o4":"500+ uds",
+  "fm.btn":"Recibir mis cotizaciones","fm.hint":"Sin spam ni compromiso — solo cotizaciones de fábrica con nombres.",
+  "ph.name":"Alex Carter","ph.email":"alex@marcamicomarca.com","ph.product":"https://amazon.com/dp/… o simplemente descríbelo",
+  "ph.msg":"Problemas con el proveedor actual, costo unitario objetivo, fechas…",
+  "wa.tip":"Escríbenos",
+  "ft.blurb":"Socio de abastecimiento en China para marcas de e-commerce de EE. UU. Cotizaciones transparentes, 8% fijo y fábricas con nombre y apellido.",
+  "ft.services":"Servicios","ft.company":"Empresa","ft.contact":"Contacto","ft.rights":"Todos los derechos reservados.",
+  "ft.line2":"Cotizaciones en USD · Para vendedores de EE. UU. y Canadá"
+}
+};
+
+const LANGS = ['en','ru','es'];
+function applyLang(lang){
+  if(!LANGS.includes(lang)) lang = 'en';
+  document.documentElement.lang = lang;
+  const dict = I18N[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const k = el.dataset.i18n;
+    if(dict[k] !== undefined) el.textContent = dict[k];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const k = el.dataset.i18nPh;
+    if(dict[k] !== undefined) el.setAttribute('placeholder', dict[k]);
+  });
+  document.querySelectorAll('.lang button').forEach(b =>
+    b.classList.toggle('on', b.dataset.lang === lang)
+  );
+  try{ localStorage.setItem('sb_lang', lang); }catch(e){}
+}
+document.querySelectorAll('.lang button').forEach(b =>
+  b.addEventListener('click', () => applyLang(b.dataset.lang))
+);
+(function(){
+  let saved = null;
+  try{ saved = localStorage.getItem('sb_lang'); }catch(e){}
+  const initial = LANGS.includes(saved) ? saved
+    : LANGS.includes((navigator.language||'en').slice(0,2).toLowerCase()) ? navigator.language.slice(0,2).toLowerCase()
+    : 'en';
+  applyLang(initial);
+})();
+
+/* ================= theme toggle ================= */
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.dataset.theme = next;
+  try{ localStorage.setItem('sb_theme', next); }catch(e){}
+});
+
+/* ================= header state ================= */
+const header = document.getElementById('header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 12);
+document.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
+
+/* ================= mobile menu ================= */
+const nav = document.getElementById('nav');
+const burger = nav.querySelector('.burger');
+burger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+nav.querySelectorAll('.nav-links a').forEach(a =>
+  a.addEventListener('click', () => nav.classList.remove('open'))
+);
+
+/* ================= scroll reveal ================= */
+const io = new IntersectionObserver(
+  entries => entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }),
+  {threshold:.12}
+);
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ================= animated counters ================= */
+const fmt = (v, dec) => dec ? v.toFixed(dec) : Math.round(v).toLocaleString('en-US');
+const counterObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(!e.isIntersecting) return;
+    counterObs.unobserve(e.target);
+    const el = e.target;
+    const target = parseFloat(el.dataset.count || '0');
+    const dec = parseInt(el.dataset.decimals || '0', 10);
+    const suffix = el.dataset.suffix || '';
+    const dur = 1500, t0 = performance.now();
+    (function tick(now){
+      const p = Math.min((now - t0) / dur, 1);
+      const ease = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(target * ease, dec) + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+    })(t0);
+  });
+}, {threshold:.4});
+document.querySelectorAll('[data-count]').forEach(el => counterObs.observe(el));
+
+/* ================= savings calculator ================= */
+const slider = document.getElementById('orderValue');
+const money = n => '$' + Math.round(n).toLocaleString('en-US');
+function updateCalc(){
+  const v = +slider.value;
+  const pct = (v - 500) / (20000 - 500) * 100;
+  slider.style.setProperty('--fill', pct + '%');
+  document.getElementById('orderValueOut').textContent = money(v);
+  document.getElementById('agentOut').textContent = money(v * .18);
+  document.getElementById('oursOut').textContent  = money(v * .08);
+  document.getElementById('saveOut').textContent  = '+' + money(v * .10);
+}
+slider.addEventListener('input', updateCalc);
+updateCalc();
+
+/* ================= contact form =================
+   Opens the visitor's email client pre-filled — works on any hosting.
+   REPLACE the address below (and its 3 appearances in the markup)
+   with the real inbox. */
+const CONTACT_EMAIL = 'hello@sourcebridge.co';
+document.getElementById('quoteForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const f = new FormData(this);
+  const body =
+    'Name: ' + f.get('name') +
+    '\nEmail: ' + f.get('email') +
+    '\nProduct: ' + f.get('product') +
+    '\nQuantity: ' + f.get('qty') +
+    (f.get('message') ? '\n\n' + f.get('message') : '');
+  window.location.href = 'mailto:' + CONTACT_EMAIL +
+    '?subject=' + encodeURIComponent('Sourcing request — ' + f.get('product')) +
+    '&body=' + encodeURIComponent(body);
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
